@@ -5,14 +5,16 @@
   <style>
     @font-face { 
         font-family: 'Enriqueta';
-        src: url("/fonts/Enriqueta-Regular.ttf"); 
+        font-style: normal;
+        src: url("../fonts/Enriqueta-Regular.ttf"); 
     }
     @font-face { 
         font-family: 'Enriqueta';
-        src: url("/fonts/Enriqueta-Bold.ttf"); 
+        font-style: bold;
+        src: url("../fonts/Enriqueta-Bold.ttf"); 
     }
     p {
-        font-family: 'Enriqueta', serif;
+        font-family: 'Enriqueta', normal;
     }
 </style>
 <div class="header">
