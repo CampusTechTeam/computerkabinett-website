@@ -1,32 +1,3 @@
-<?php 
-session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
-
-if(isset($_GET['login'])) {
-    $nutzername = $_POST['nutzername'];
-    $passwort = $_POST['passwort'];
-    
-    $statement = $pdo->prepare("SELECT * FROM users WHERE nutzername = :nutzername");
-    $result = $statement->execute(array('nutzername' => $nutzername));
-    $user = $statement->fetch();
-
-    //Überprüfung des Passworts
-    if ($user !== false && password_verify($passwort, $user['passwort'])) {
-        $_SESSION['userid'] = $user['id'];
-        $_SESSION['admin'] = $user['admin'];
-        $_SESSION['nutzername'] = $user['nutzername'];
-        if(isset($_POST['ref'])){
-            echo "<meta http-equiv = 'refresh' content = '1; url = ";
-            echo $_POST['ref'];
-            echo "' />";
-        }
-        die('Login erfolgreich');
-    } else {
-        $errorMessage = "Nutzername oder Passwort war ungültig<br>";
-    }
-    
-}
-?>
 <!DOCTYPE html> 
 <html> 
 <head>
@@ -64,8 +35,35 @@ if(isset($_GET['login'])) {
 </div>  
 </head> 
 <body>
+<?php 
+session_start();
+$pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
 
-    <?php 
+if(isset($_GET['login'])) {
+    $nutzername = $_POST['nutzername'];
+    $passwort = $_POST['passwort'];
+    
+    $statement = $pdo->prepare("SELECT * FROM users WHERE nutzername = :nutzername");
+    $result = $statement->execute(array('nutzername' => $nutzername));
+    $user = $statement->fetch();
+
+    //Überprüfung des Passworts
+    if ($user !== false && password_verify($passwort, $user['passwort'])) {
+        $_SESSION['userid'] = $user['id'];
+        $_SESSION['admin'] = $user['admin'];
+        $_SESSION['nutzername'] = $user['nutzername'];
+        if(isset($_POST['ref'])){
+            echo "<meta http-equiv = 'refresh' content = '1; url = ";
+            echo $_POST['ref'];
+            echo "' />";
+        }
+        die('Der Login war erfolgreich!');
+    } else {
+        $errorMessage = "Nutzername oder Passwort war ungültig<br>";
+    }
+    
+}
+
     if(isset($errorMessage)) {
         echo "<p style='color: red;'>";
         echo $errorMessage;
