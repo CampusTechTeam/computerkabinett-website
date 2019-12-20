@@ -57,7 +57,7 @@ if(isset($_GET['login'])) {
             echo $_POST['ref'];
             echo "' />";
         }
-        die('Der Login war erfolgreich!');
+        die("<p style='color: lime;'>Der Login war erfolgreich!");
     } else {
         $errorMessage = "Nutzername oder Passwort war ungültig<br>";
     }
