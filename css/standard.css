@@ -35,7 +35,7 @@
 .header a.logo {
   font-size: 28px;
   font-weight: bold;
-  font-family: 'Baloo Bhai Remote', cursive;
+  font-family: 'Baloo Bhai', cursive;
   color: #0083ff;
     
 }
@@ -50,10 +50,10 @@
 .header a.active {
   background-color: dodgerblue;
   color: white;
-  font-family: 'Maiden Orange Remote', cursive;
+  font-family: 'Maiden Orange', cursive;
 }
     .header a.items {
-    font-family: 'Maiden Orange Remote', cursive;
+    font-family: 'Maiden Orange', cursive;
     }
 /* Float the link section to the right */
 .header-right {
