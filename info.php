@@ -25,7 +25,7 @@ tr:last-child {background-color: #00ccff; color: white;}
         <a href="" class="logo">MCB Computerkabinett</a>
         <div class="header-right">
 
-            <a class="items" href="info.php">Informationen</a>
+            <a class="active" href="info.php">Informationen</a>
             <a class="items" href="management/index.php">Login/Meine VMs</a>
         </div>
     </div>

@@ -21,12 +21,12 @@ tr:last-child {background-color: #00ccff; color: white;}
 </style>
 </head>
 <body>
-	<div class="header">
+  <div class="header">
         <a href="" class="logo">MCB Computerkabinett</a>
         <div class="header-right">
 
             <a class="items" href="info.php">Informationen</a>
-            <a class="items" href="management/index.php">Login/Meine VMs</a>
+            <a class="active" href="">Login/Meine VMs</a>
         </div>
     </div>
 
