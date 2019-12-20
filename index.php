@@ -25,5 +25,5 @@
 </div>
 </head>
 <body>
-
+<p>Herzlich Willkommen im Computerkabinett des MCB, wähle Login aus um auf deinen VM zuzugreifen</p>
 </body>
