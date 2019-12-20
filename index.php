@@ -9,12 +9,19 @@
         src: url("../fonts/Enriqueta-Regular.ttf"); 
     }
     @font-face { 
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("../fonts/Roboto-Regular.ttf"); 
+    }
+    @font-face { 
         font-family: 'Enriqueta';
         font-style: bold;
         src: url("../fonts/Enriqueta-Bold.ttf"); 
     }
     p {
-        font-family: 'Enriqueta', normal;
+        font-family: 'Roboto', normal;
     }
 </style>
 <div class="header">
