@@ -4,14 +4,14 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Baloo Bhai Regular'), local('BalooBhai-Regular'), url("/fonts/BalooBhai-Regular.woff2") format('woff2');
+  src: local('Baloo Bhai Regular'), local('BalooBhai-Regular'), url("fonts/BalooBhai-Regular.woff2") format('woff2');
 }
 @font-face {
   font-family: 'Maiden Orange';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Maiden Orange Regular'), local('MaidenOrange-Regular'), url("/fonts/MaidenOrange-Regular.woff2") format('woff2');
+  src: local('Maiden Orange Regular'), local('MaidenOrange-Regular'), url("fonts/MaidenOrange-Regular.woff2") format('woff2');
 }
 .header {
   overflow: hidden;
