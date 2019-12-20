@@ -5,27 +5,39 @@
 
   <style>
     @font-face { 
-        font-family: 'Enriqueta';
-        font-style: normal;
-        src: url("../fonts/Enriqueta-Regular.ttf"); 
+      font-family: 'Enriqueta';
+      font-style: normal;
+      src: url("../fonts/Enriqueta-Regular.ttf"); 
     }
     @font-face { 
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url("../fonts/Roboto-Regular.ttf"); 
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("../fonts/Roboto-Regular.ttf"); 
     }
     @font-face { 
-        font-family: 'Enriqueta';
-        font-style: bold;
-        src: url("../fonts/Enriqueta-Bold.ttf"); 
+      font-family: 'Enriqueta';
+      font-style: bold;
+      src: url("../fonts/Enriqueta-Bold.ttf"); 
     }
     p {
-        font-family: 'Roboto', normal;
+      font-family: 'Roboto', normal;
     }
-</style>
-<div class="header">
+    table {
+     width: 100%;
+     text-align: middle;
+     font-family: 'Enriqueta', serif;
+   }
+   td {
+     padding: 5px;
+     text-align: middle;
+     font-family: 'Enriqueta', serif;   
+     border-top: 1px solid #ddd;
+   }
+   tr:last-child {background-color: #00ccff; color: white;}
+ </style>
+ <div class="header">
   <a href="../index.php" class="logo">MCB Computerkabinett</a>
   <div class="header-right">
     <?php
@@ -47,7 +59,7 @@
 </div>
 </head>
 <body>
-<?php
-echo "<p><b>Hier sind deine VMs im Mediencampus, ";
-echo $_SESSION['nutzername'];
-echo "!<b></p>";
+  <?php
+  echo "<p><b>Hier sind deine VMs im Mediencampus, ";
+  echo $_SESSION['nutzername'];
+  echo "!<b></p>";
