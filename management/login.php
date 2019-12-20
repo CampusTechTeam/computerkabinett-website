@@ -30,7 +30,7 @@
     <div class="header-right">
 
         <a class="items" href="../info.php">Informationen</a>
-        <a class="active" href="">Login/Meine VMs</a>
+        <a class="active" href="login.php">Login/Meine VMs</a>
     </div>
 </div>  
 </head> 
