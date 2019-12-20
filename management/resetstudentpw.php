@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-  <title>MCB Computerkabinett - Registrierung </title>  
+  <title>MCB Computerkabinett - Passwort Reset </title>  
   <link rel = "stylesheet" type = "text/css" href = "../css/standard.css" />
   <style>
     @font-face { 
