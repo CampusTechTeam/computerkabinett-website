@@ -1,17 +1,11 @@
     /* Style the header with a grey background and some padding */
 @font-face {
-  font-family: 'Baloo Bhai';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Baloo Bhai Regular'), local('BalooBhai-Regular'), url("fonts/BalooBhai-Regular.woff2") format('woff2');
-}
-@font-face {
   font-family: 'Maiden Orange';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Maiden Orange Regular'), local('MaidenOrange-Regular'), url("fonts/MaidenOrange-Regular.woff2") format('woff2');
+  src: local('Maiden Orange Regular'), local('MaidenOrange-Regular'), url("/local/MaidenOrange-Regular.ttf") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .header {
   overflow: hidden;
@@ -35,7 +29,7 @@
 .header a.logo {
   font-size: 28px;
   font-weight: bold;
-  font-family: 'Baloo Bhai', cursive;
+  font-family: 'Baloo Bhai', normal;
   color: #0083ff;
     
 }
@@ -50,10 +44,10 @@
 .header a.active {
   background-color: dodgerblue;
   color: white;
-  font-family: 'Maiden Orange', cursive;
+  font-family: 'Maiden Orange', normal;
 }
     .header a.items {
-    font-family: 'Maiden Orange', cursive;
+    font-family: 'Maiden Orange', normal;
     }
 /* Float the link section to the right */
 .header-right {
