@@ -1,6 +1,7 @@
 <html>
 <head>
   <link rel = "stylesheet" type = "text/css" href = "../css/standard.css" />
+  <title>MCB Computerkabinett - Meine VMs</title>
 
   <style>
     table {
