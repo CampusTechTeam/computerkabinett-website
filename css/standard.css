@@ -1,11 +1,17 @@
     /* Style the header with a grey background and some padding */
-@font-face { 
-font-family: "Baloo Bhai Remote"; 
-src: url("/fonts/BalooBhai-Regular.ttf"); 
+@font-face {
+  font-family: 'Baloo Bhai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Baloo Bhai Regular'), local('BalooBhai-Regular'), url("/fonts/BalooBhai-Regular.woff2") format('woff2');
 }
-@font-face { 
-font-family: "Maiden Orange Remote"; 
-src: url("/fonts/MaidenOrange-Regular.ttf"); 
+@font-face {
+  font-family: 'Maiden Orange';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Maiden Orange Regular'), local('MaidenOrange-Regular'), url("/fonts/MaidenOrange-Regular.woff2") format('woff2');
 }
 .header {
   overflow: hidden;
