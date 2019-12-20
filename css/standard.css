@@ -1,10 +1,10 @@
     /* Style the header with a grey background and some padding */
 @font-face { 
-font-family: "Baloo Bhai"; 
+font-family: "Baloo Bhai Remote"; 
 src: url("/fonts/BalooBhai-Regular.ttf"); 
 }
 @font-face { 
-font-family: "Maiden Orange"; 
+font-family: "Maiden Orange Remote"; 
 src: url("/fonts/MaidenOrange-Regular.ttf"); 
 }
 .header {
@@ -29,7 +29,7 @@ src: url("/fonts/MaidenOrange-Regular.ttf");
 .header a.logo {
   font-size: 28px;
   font-weight: bold;
-  font-family: 'Baloo Bhai', cursive;
+  font-family: 'Baloo Bhai Remote', cursive;
   color: #0083ff;
     
 }
@@ -44,10 +44,10 @@ src: url("/fonts/MaidenOrange-Regular.ttf");
 .header a.active {
   background-color: dodgerblue;
   color: white;
-  font-family: 'Maiden Orange', cursive;
+  font-family: 'Maiden Orange Remote', cursive;
 }
     .header a.items {
-    font-family: 'Maiden Orange', cursive;
+    font-family: 'Maiden Orange Remote', cursive;
     }
 /* Float the link section to the right */
 .header-right {
