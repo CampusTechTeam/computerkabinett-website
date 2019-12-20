@@ -1,7 +1,3 @@
-<?php 
-session_start();
-$pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
-?>
 <!DOCTYPE html> 
 <html> 
 <head>
@@ -34,13 +30,21 @@ $pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uS
     <div class="header-right">
 
         <a class="items" href="../info.php">Informationen</a>
-        <a class="active" href="">Login/Meine VMs</a>
+        <a class="active" href="login.php">Login/Meine VMs</a>
     </div>
 </div>  
 </head> 
 <body>
-
-    <?php
+<?php
+session_start();
+if(!isset($_SESSION['userid'])) {
+    echo("<meta http-equiv = 'refresh' content = '1; url = login.php?ref=registerstudent.php' />");
+    die('<p>Um diese funktionalität zu nutzen ist der <a href="login.php">Login</a> erforderlich! Die Weiterleitung zum Login erfolgt in der regel automatisch</p>');
+}
+if($_SESSION['admin']!=1){
+    die("Das Erstellen neuer Accounts ist nur befugten Personen erlaubt!");
+}
+$pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
 
 if(isset($_GET['register'])) {
@@ -99,7 +103,7 @@ if($showFormular) {
             Passwort wiederholen:<br>
             <input type="password" size="40" maxlength="250" name="passwort2"><br><br>
 
-            <input type="submit" value="Abschicken">
+            <input type="submit" value="Nutzer erstellen">
         </p>
     </form>
 

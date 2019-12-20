@@ -13,7 +13,14 @@ if(isset($_GET['login'])) {
     //Überprüfung des Passworts
     if ($user !== false && password_verify($passwort, $user['passwort'])) {
         $_SESSION['userid'] = $user['id'];
-        die('Login erfolgreich. Weiter zu <a href="geheim.php">internen Bereich</a>');
+        $_SESSION['admin'] = $user['admin'];
+        $_SESSION['nutzername'] = $user['nutzername'];
+        if(isset($_POST['ref'])){
+            echo "<meta http-equiv = 'refresh' content = '1; url = ";
+            echo $_POST['ref'];
+            echo "' />";
+        }
+        die('Login erfolgreich');
     } else {
         $errorMessage = "Nutzername oder Passwort war ungültig<br>";
     }
@@ -70,6 +77,13 @@ if(isset($_GET['login'])) {
             <input size="40" maxlength="250" name="nutzername"><br><br>
             Passwort:<br>
             <input type="password" size="40"  maxlength="250" name="passwort"><br>
+            <?php
+            if(isset($_GET['ref'])){
+                echo "<input type='hidden' name='ref' value='";
+                echo $_GET['ref'];
+                echo "'>";
+            }
+            ?>
             <input type="submit" value="Anmelden">
         </p>
     </form> 
