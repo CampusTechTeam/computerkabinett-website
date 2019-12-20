@@ -3,21 +3,17 @@
   <link rel = "stylesheet" type = "text/css" href = "css/standard.css" />
   <title>MCB Computerkabinett</title>
   <style>
-      table {
-         width: 100%;
-         text-align: middle;
-         font-family: 'Enriqueta', serif;
-     }
-     td {
-       padding: 5px;
-       text-align: middle;
-       font-family: 'Enriqueta', serif;   
-       border-top: 1px solid #ddd;
-   }
-   html {
-    font-family: 'Enriqueta', serif;
-}
-tr:last-child {background-color: #00ccff; color: white;}
+    @font-face { 
+        font-family: 'Enriqueta';
+        src: url("/fonts/Enriqueta-Regular.ttf"); 
+    }
+    @font-face { 
+        font-family: 'Enriqueta';
+        src: url("/fonts/Enriqueta-Bold.ttf"); 
+    }
+    p {
+        font-family: 'Enriqueta', serif;
+    }
 </style>
 <div class="header">
     <a href="" class="logo active">MCB Computerkabinett</a>
@@ -29,4 +25,5 @@ tr:last-child {background-color: #00ccff; color: white;}
 </div>
 </head>
 <body>
+
 </body>
