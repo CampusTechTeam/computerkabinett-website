@@ -39,10 +39,10 @@
 session_start();
 if(!isset($_SESSION['userid'])) {
     echo("<meta http-equiv = 'refresh' content = '1; url = login.php?ref=registerstudent.php' />");
-    die('<p>Um diese funktionalität zu nutzen ist der <a href="login.php">Login</a> erforderlich! Die Weiterleitung zum Login erfolgt in der regel automatisch</p>');
+    die("<p style='color: red;'>Um diese funktionalität zu nutzen ist der <a href='login.php'>Login</a> erforderlich! Die Weiterleitung zum Login erfolgt in der regel automatisch</p>");
 }
 if($_SESSION['admin']!=1){
-    die("Das Erstellen neuer Accounts ist nur befugten Personen erlaubt!");
+    die("<p style='color: red;'>Das Erstellen neuer Accounts ist nur befugten Personen erlaubt!");
 }
 $pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
 $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
@@ -54,11 +54,11 @@ if(isset($_GET['register'])) {
     $passwort2 = $_POST['passwort2'];
 
     if(strlen($passwort) == 0) {
-        echo 'Bitte ein Passwort angeben<br>';
+        echo "<p style='color: red;'>Bitte ein Passwort angeben<br>";
         $error = true;
     }
     if($passwort != $passwort2) {
-        echo 'Die Passwörter müssen übereinstimmen<br>';
+        echo "<p style='color: red;'>Die Passwörter müssen übereinstimmen<br>";
         $error = true;
     }
     
@@ -69,7 +69,7 @@ if(isset($_GET['register'])) {
         $user = $statement->fetch();
         
         if($user !== false) {
-            echo 'Dieser Nutzername ist bereits vergeben<br>';
+            echo "<p style='color: red;'>Dieser Nutzername ist bereits vergeben</p><br>";
             $error = true;
         }    
     }
@@ -82,10 +82,10 @@ if(isset($_GET['register'])) {
         $result = $statement->execute(array('nutzername' => $nutzername, 'passwort' => $passwort_hash));
         
         if($result) {        
-            echo 'Sch&uumller registriert. <a href="login.php">Zum Login</a>';
+            echo "<p style='color: lime;'>Sch&uumller registriert. <a href="login.php">Zum Login</a>";
             $showFormular = false;
         } else {
-            echo 'Ein Datenbankfehler ist Aufgetreten!<br>';
+            echo "<p style='color: red;'Ein Datenbankfehler ist Aufgetreten!<br>";
         }
     } 
 }

@@ -41,10 +41,10 @@ session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
 if(!isset($_SESSION['userid'])) {
     echo("<meta http-equiv = 'refresh' content = '1; url = login.php?ref=resetstudentpw.php' />");
-    die('<p>Um diese funktionalität zu nutzen ist der <a href="login.php">Login</a> erforderlich! Die Weiterleitung zum Login erfolgt in der regel automatisch</p>');
+    die("<p style='color: red;'>Um diese funktionalität zu nutzen ist der <a href='login.php'>Login</a> erforderlich! Die Weiterleitung zum Login erfolgt in der regel automatisch</p>");
 }
 if($_SESSION['admin']!=1){
-    die("Das Erstellen neuer Accounts ist nur befugten Personen erlaubt!");
+    die("<p style='color: red;'>Das &Aumlndern von Accounts ist nur befugten Personen erlaubt!</p>");
 }
 $showForm=true;
 if(isset($_GET['send'])) {
@@ -52,16 +52,16 @@ if(isset($_GET['send'])) {
 	$passwort2 = $_POST['passwort2'];
 	
 	if($passwort != $passwort2) {
-		echo "Die Passw&oumlrter stimmen nicht überein!";
+		echo "<p style='color: red;'>Die Passw&oumlrter stimmen nicht überein!</p>";
 	} else { //Speichere neues Passwort und lösche den Code
 		$passworthash = password_hash($passwort, PASSWORD_DEFAULT);
 		$statement = $pdo->prepare("UPDATE users SET passwort = :passworthash WHERE nutzername = :username");
 		$result = $statement->execute(array('passworthash' => $passworthash, 'username'=> $_POST['username'] ));
 		
 		if($result) {
-			echo "Das Passwort von ";
+			echo "<p style='color: lime;'>Das Passwort von ";
 			echo $_POST['username'];
-			echo " wurde ge&aumlndert";
+			echo " wurde ge&aumlndert</p>";
 			$showForm = false;
 		}
 	}
