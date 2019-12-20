@@ -1,7 +1,7 @@
 <html>
 <head>
   <link rel = "stylesheet" type = "text/css" href = "css/standard.css" />
-
+  <title>MCB Computerkabinett</title>
   <style>
       table {
          width: 100%;
