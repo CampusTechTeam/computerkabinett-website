@@ -64,4 +64,4 @@
 
 <?php
 shell_exec("/usr/bin/sudo -u leanderneubronner /Applications/VirtualBox.app/Contents/MacOS/VBoxManage controlvm '1' savestate");
-echo "<p><b>VM wurde gestartet!</b></p>";
+echo "<p style='color: lime'><b>VM wurde abgeschaltet!</b></p>";

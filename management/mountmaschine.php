@@ -66,8 +66,8 @@
 #User needs Sudo Perms!
 shell_exec("/usr/bin/sudo -u leanderneubronner /Applications/VirtualBox.app/Contents/MacOS/VBoxManage startvm '1' --type headless");
 echo "<p syle='color: lime'><b>VM wurde gestartet! Bitte warte einen moment!</b></p>";
-#shell_exec("/usr/bin/ssh pi@raspberrypi.local \"export DISPLAY=:0; xfreerdp -f /usb:auto /sound /microphone /v:imac.local:3389 /u:raspberrypi /p:5xyG7z9XZVZvwsWQSEA95qAhv5BXJCwYKkfqd9LZ\"");
-#echo "<p><b>Fenster wird geöffnet!</b></p>";
+shell_exec("/usr/bin/ssh pi@raspberrypi.local \"export DISPLAY=:0; xfreerdp -f /usb:auto /sound /microphone /v:192.168.178.30:3389 /u:raspberrypi /p:5xyG7z9XZVZvwsWQSEA95qAhv5BXJCwYKkfqd9LZ\"");
+echo "<p><b>Fenster wird geöffnet!</b></p>";
 ?>
 
 </body>
