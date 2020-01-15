@@ -60,18 +60,8 @@
 </div>
 </head>
 <body>
-  <?php
-  echo "<p><b>Hier sind deine VMs im Mediencampus, ";
-  echo $_SESSION['nutzername'];
-  echo "!</b></p>";
-  $statement = $pdo->prepare("SELECT vmname,vmid FROM VM WHERE ownerid = :userid");
-    $result = $statement->execute(array('userid' => $_SESSION['userid']));
-    while($row = $statement->fetch()) {
-      echo "<button onclick=\"window.location.href = 'mountmaschine.php?id=";
-      echo $row['vmid'];
-      echo "';\">VM Nutzen!</button>";
-    }
-
-    ?>
 
 
+<?php
+shell_exec("/usr/bin/sudo -u leanderneubronner /Applications/VirtualBox.app/Contents/MacOS/VBoxManage controlvm '1' savestate");
+echo "<p><b>VM wurde gestartet!</b></p>";
