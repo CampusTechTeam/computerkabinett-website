@@ -43,7 +43,7 @@
     <?php
     $pdo = new PDO('mysql:host=localhost;dbname=computerkabinett', 'webhost', 'wL2uSP4Ex2KD');
     session_start();
-    if(!isset($_SESSION['userid'])) {
+    /*if(!isset($_SESSION['userid'])) {
       echo("<meta http-equiv = 'refresh' content = '1; url = login.php?ref=index.php' />");
       die("</div></div><p style='color: red;'>Um auf deine VMs zugreifen zu k&oumlnnen ist ein <a href='login.php'>Login</a> erforderlich! Die Weiterleitung zum Login erfolgt in der regel automatisch</p>");
     }
@@ -53,6 +53,7 @@
     echo "</a>";
     echo "<a class='items' href='logout.php'>Logout</a>";
     echo "<a class='items' href='help.php'>Hilfe</a>";
+    */
     ?>
     
     
