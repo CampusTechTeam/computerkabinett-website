@@ -82,7 +82,7 @@ if(isset($_GET['register'])) {
         $result = $statement->execute(array('nutzername' => $nutzername, 'passwort' => $passwort_hash));
         
         if($result) {        
-            echo "<p style='color: lime;'>Sch&uumller registriert. <a href="login.php">Zum Login</a>";
+            echo "<p style='color: lime;'>Sch&uumller registriert. <a href='login.php'>Zum Login</a>";
             $showFormular = false;
         } else {
             echo "<p style='color: red;'Ein Datenbankfehler ist Aufgetreten!<br>";
